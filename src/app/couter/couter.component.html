@@ -4,7 +4,7 @@
 <button (click)="inc()">like</button>
 <button (click)="dec()">dislike</button><br>
 <br>
-<input type="text" [(ngModel)]="newtask"><button (click)="addtask()">add</button>
+<input type="text"  [(ngModel)]="newtask"><button (click)="addtask()">add</button>
 <ul>
     <li *ngFor="let  t of task;let i=index">{{t}}
         <button (click)="detetask(i)">detele</button>
