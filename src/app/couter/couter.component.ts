@@ -8,7 +8,7 @@ import { Component,Input } from '@angular/core';
 export class CouterComponent {
 
 @Input () counter:number=0
-@Input() num:number=5
+@Input() num:number=0
   inc(){
     this.counter=this.counter+this.num
   }
