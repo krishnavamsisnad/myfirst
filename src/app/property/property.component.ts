@@ -10,16 +10,19 @@ export class PropertyComponent {
     {
       fristname:"vamsi",
       lastname:"nalluri",
-      age:23
+      age:23,
+      gender:"male"
     },  {
       fristname:"sai",
       lastname:"edupucati",
-      age:23
+      age:23,
+      gender:"female"
     },
     {
       fristname:"sai",
       lastname:"pusunuri",
-      age:23
+      age:23,
+      gender:"male"
     }
   ]
 }
