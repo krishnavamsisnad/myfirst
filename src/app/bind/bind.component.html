@@ -1,0 +1,36 @@
+<p>bind works!</p>
+<h1>{{name}}</h1>
+<ol>
+  <li *ngFor="let s of students">{{s}}</li>
+  <button (click)="abc()">click</button>
+</ol>
+<table border="2">
+ <tr >
+   <th (click)="emsort('fristname')">fristname</th>
+  <th (click)="emsort('lastname')">lastname</th>
+  <th (click)="emsort('age')">age</th>
+  <th (click)="emsort('gender')">gender</th></tr>
+  <tbody>
+    <tr *ngFor="let e of employer" [style.backgroundColor]="(e.gender==='male')?'red':'green'">
+      <td>{{e.fristname}}</td>
+      <td>{{e.lastname}}</td>
+      <td>{{e.age}}</td>
+      <td>{{e.gender}}</td>
+  </tbody>
+</table>
+<br>
+<br>
+<input type="text" [(ngModel)]="company">
+<p>{{company}}</p>
+<input type="radio" name="gen" [(ngModel)]="gender" value="M">:Male
+<input type="radio" name="gen" [(ngModel)]="gender" value="F">:FeMale
+<p>selected gender {{gender}}</p>
+<img  *ngIf="gender==='M'" [src]="Imagemale" alt="" width="100px">
+<img  *ngIf="gender==='F'" [src]="Imagefemale" alt="" width="100px">
+<br>
+<b>select your course</b>
+<div *ngFor="let  t of alltechology">
+  <input type="checkbox" [value]="t"  (change)="updatetechology($event)">
+  {{t}}
+</div>
+<p *ngFor="let t of selected">{{t}}</p>

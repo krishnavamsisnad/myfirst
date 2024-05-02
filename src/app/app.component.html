@@ -1,16 +1,4 @@
+
 <h1>{{name}}</h1>
-<ol>
-  <li *ngFor="let s of students">{{s}}</li>
-  <button (click)="abc()">click</button>
-</ol>
-<table border="2">
- <tr> <th>fristname</th>
-  <th>lastname</th>
-  <th>age</th></tr>
-  <tbody>
-    <tr *ngFor="let e of employer">
-      <td>{{e.fristname}}</td>
-      <td>{{e.lastname}}</td>
-      <td>{{e.age}}</td>
-  </tbody>
-</table>
+<app-bind></app-bind>
+<app-couter [counter]="50" [num]="5"></app-couter>
