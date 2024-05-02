@@ -4,12 +4,16 @@
         <th>frsstname</th>
         <th>lastname</th>
         <th>age</th>
+        <th>gender</th>
     </thead>
     <tbody>
-        <tr *ngFor="let e of students" >
+        <tr *ngFor="let e of students" [style.backgroundColor]="(e.gender==='male')?'red':'green'">
             <td>{{e.fristname}}</td>
             <td>{{e.lastname}}</td>  
              <td>{{e.age}}</td>
+             <td>{{e.gender}}</td>
         </tr>
     </tbody>
 </table>
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>

@@ -25,4 +25,5 @@ export class PropertyComponent {
       gender:"male"
     }
   ]
+  name="vamsi"
 }
