@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DriectivesComponent } from './driectives/driectives.component';
+import { StyleComponent } from './style/style.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DriectivesComponent
+    DriectivesComponent,
+    StyleComponent
   ],
   imports: [
     BrowserModule,
