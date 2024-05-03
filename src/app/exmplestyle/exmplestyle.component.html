@@ -1,0 +1,23 @@
+<p>exmplestyle works!</p>
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>
+<h1 [ngClass]="isactive?'active':'inactive'">vamsi</h1>
+<h2 *ngIf="!city ;then c ;else d"></h2>
+
+<ng-template #c>
+    Loading
+</ng-template>
+<ng-template #d>
+    <b>{{city}}</b>
+</ng-template>
+<input type="text" >
+<ul>
+    <li *ngFor="let a of city index as i">{{a}}
+    {{i}}
+    <button (click)="abc(i)">Delete</button>
+    </li>
+   
+</ul>
+<button (click)="exampl()">click</button>
+
+<button [disabled]=active>hidde</button>
