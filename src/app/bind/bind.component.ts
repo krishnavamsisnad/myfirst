@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class BindComponent {
   name="welcome to snad";
-  company="snad"
+  company:string="snad"
   gender=null
   Imagemale="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?cs=srgb&dl=pexels-italo-melo-881954-2379004.jpg&fm=jpg"
   Imagefemale="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"
