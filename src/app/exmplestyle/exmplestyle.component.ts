@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input} from '@angular/core';
 
 @Component({
   selector: 'app-exmplestyle',
@@ -17,5 +17,12 @@ active=false
 exampl(){
 this.name=("banguluru")
 }
+counter=0
 
+inc(){
+  this.counter++
+}
+dec(){
+  this.counter--
+}
 }
