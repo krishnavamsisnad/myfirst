@@ -4,7 +4,7 @@
   <li *ngFor="let s of students">{{s}}</li>
   <button (click)="abc()">click</button>
 </ol>
-<table border="2">
+<!-- <table border="2">
  <tr >
    <th (click)="emsort('fristname')">fristname</th>
   <th (click)="emsort('lastname')">lastname</th>
@@ -17,7 +17,10 @@
       <td>{{e.age}}</td>
       <td>{{e.gender}}</td>
   </tbody>
-</table>
+</table> -->
+<ul>
+  <li *ngFor="let a of employer">{{a}}</li>
+</ul>
 <br>
 <br>
 <input type="text" [(ngModel)]="company">
