@@ -18,9 +18,9 @@ exampl(){
 this.name=("banguluru")
 }
 counter=0
-
+@Input() x:number=2
 inc(){
-  this.counter++
+  this.counter=this.counter.x
 }
 dec(){
   this.counter--
