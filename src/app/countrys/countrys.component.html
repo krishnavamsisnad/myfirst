@@ -1,0 +1,5 @@
+<p>countrys works!</p>
+<img *ngIf="isloading" src="https://e7.pngegg.com/pngimages/599/45/png-clipart-computer-icons-loading-chart-hand-circle.png" alt="">
+<ul ><li *ngFor="let c of countrys">
+    <a [routerLink]="['/countrydetails/',c.name.common]" [queryParams]="abc(c)">{{c.name.common}}</a>
+</li></ul>
