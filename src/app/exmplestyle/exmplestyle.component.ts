@@ -20,9 +20,21 @@ this.name=("banguluru")
 counter=0
 @Input() x:number=2
 inc(){
-  this.counter=this.counter.x
+  this.counter=this.counter+this.x
 }
 dec(){
-  this.counter--
+  this.counter=this.counter-this.x
 }
+price=43555
+studentname="vamsi"
+students=[
+  {
+    fritname:"vamsi",
+    age:23
+  },
+  {
+    fritname:"sai",
+    age:23
+  }
+]
 }

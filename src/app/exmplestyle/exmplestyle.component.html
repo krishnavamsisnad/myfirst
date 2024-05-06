@@ -10,7 +10,7 @@
 <ng-template #d>
     <b>{{city}}</b>
 </ng-template>
-<input type="text" >
+
 <ul>
     <li *ngFor="let a of city index as i">{{a}}
     {{i}}
@@ -49,3 +49,8 @@
   <button (click)="inc()">increment</button>
   <button (click)="dec()">decrement</button>
 <h2>{{counter}}</h2>
+<h5>{{price | currency : "INR"}}</h5>
+<h3>{{studentname | uppercase}}</h3>
+<h5>{{students | json}}</h5>
+
+
