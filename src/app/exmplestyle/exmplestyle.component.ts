@@ -1,4 +1,4 @@
-import { Component,Input} from '@angular/core';
+import { Component,EventEmitter,Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-exmplestyle',
@@ -18,12 +18,18 @@ exampl(){
 this.name=("banguluru")
 }
 counter=0
-@Input() x:number=2
+@Input() x:any
+@Input ()y:any
+@Output() refer=new EventEmitter()
+message="hi this is exmple"
 inc(){
-  this.counter=this.counter+this.x
+  this.counter=this.counter+this.y
 }
 dec(){
   this.counter=this.counter-this.x
+}
+passdata(){
+this.refer.emit(this.message)
 }
 price=43555
 studentname="vamsi"

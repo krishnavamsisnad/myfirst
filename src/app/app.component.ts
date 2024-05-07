@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myfirst';
+  data=2
+  dec=5
+cdata:any
+pdata:any
+sdata:any
+update(e:any){
+  this.cdata=e
+}
+updatapraent(e:any){
+this.pdata=e
+}
+dataupdate(e:any){
+this.sdata=e
+}
 }
