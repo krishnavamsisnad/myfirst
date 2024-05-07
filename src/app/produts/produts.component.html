@@ -1,1 +1,12 @@
 <p>produts works!</p>
+
+  <div class="main">
+    <div *ngFor="let p of product">
+        <li >{{p.title }}</li>
+     
+          <img width="50px"   src={{p.image}} alt="">
+          <b>{{p.price  }}</b>
+      
+    </div>
+
+  </div>
