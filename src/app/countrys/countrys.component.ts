@@ -12,6 +12,7 @@ export class CountrysComponent {
   ngOnInit(){
   this.cs.getAllcountrys().subscribe({
     next:(data)=>{
+       console.log(data)
      this.countrys=data
     },
     error:(err)=>{
