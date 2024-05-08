@@ -1,2 +1,17 @@
 <p>sub-data works!</p>
 <h1>{{name}}</h1>
+<input type="text" [(ngModel)]="see">
+<table>
+    <thead>
+        <th>tittle</th>
+        <th>price</th>
+        <th>image</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products | search :see">
+            <td>{{p.title}}</td>
+            <td>{{p.price}}</td>
+            <td><img width="100px" src={{p.image}}/></td>
+        </tr>
+    </tbody>
+</table>
