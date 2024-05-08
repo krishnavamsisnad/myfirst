@@ -14,7 +14,7 @@ export class SortPipe implements PipeTransform {
       if (order === "asc") {
         return a[key] > b[key] ? 1 : -1;
       } else {
-        return a[key] < b[key] ? -1 : 1;
+        return a[key] > b[key] ? -1 : 1;
       }
     });
   }
