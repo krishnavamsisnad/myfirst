@@ -7,19 +7,8 @@ import { Component } from '@angular/core';
 })
 export class TodoComponent {
   people:any
-students=[
-  {
-    name:"vamsi",
-    age:23,
-  collage:"sasi"
-  },
-  {
-    name:"sai",
-    age:23,
-  collage:"manasa"
-  }
-]
+students=["vamsi"]
 abc(){
-this.people.push(this.students)
+this.students.push(this.people)
 }
 }
