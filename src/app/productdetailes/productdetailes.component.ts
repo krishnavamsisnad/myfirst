@@ -16,10 +16,10 @@ ngOnInit(){
   this.pra.params.subscribe((qa)=>{
     console.log(qa)
 
-    this.products=qa["ptitle"]
+    this.products=qa["id"]
 
     this.pra.queryParams.subscribe((product:any)=>{
-      this.productdata=JSON.stringify(product)
+      this.productdata=product
       console.log(product)
     
     })
