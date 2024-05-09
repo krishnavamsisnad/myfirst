@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountrysComponent } from './countrys/countrys.component';
 import { ProductsComponent } from './products/products.component';
 import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
+import { ProductdetailesComponent } from './productdetailes/productdetailes.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CountrydetailsComponent } from './countrydetails/countrydetails.compone
     CountrysComponent,
     ProductsComponent,
     CountrydetailsComponent,
+    ProductdetailesComponent,
     
   ],
   imports: [
