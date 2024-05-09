@@ -1,11 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SubDataComponent } from './data/sub-data/sub-data.component';
+import { TabledataComponent } from './tabledata/tabledata.component';
+import { ProductdetailesComponent } from './data/productdetailes/productdetailes.component';
 
 const routes: Routes = [
   {
+    path:"data",
+  component:TabledataComponent
+  },
+  {
     path:"product",
-    component:SubDataComponent
+    component:SubDataComponent,
+    children:[
+      {
+        path:`productdetails/:pname`,
+        component:ProductdetailesComponent
+      }
+    ]
   }
 ];
 

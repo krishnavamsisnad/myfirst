@@ -7,6 +7,7 @@ import { SortPipe } from './sort.pipe';
 import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
 import { DataModule } from './data/data.module';
+import { TabledataComponent } from './tabledata/tabledata.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { DataModule } from './data/data.module';
     AppComponent,
     SortPipe,
     SearchPipe,
+    TabledataComponent,
   
   
   ],

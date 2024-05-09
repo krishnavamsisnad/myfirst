@@ -1,0 +1,18 @@
+<p>tabledata works!</p>
+<input type="text" [(ngModel)]="see" placeholder="search"><br><br>
+<table border="1" >
+    <thead>
+        <th>id</th>
+        <th (click)="setkey('name')">name</th>
+    <th (click)="setkey('number')">number</th>
+    <th (click)="setkey('email')">email</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of user |sort :[key,order] | search:see">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>{{u.number}}</td>
+            <td>{{u.email}}</td>
+        </tr>
+    </tbody>
+</table>
