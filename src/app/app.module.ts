@@ -10,12 +10,14 @@ import { DataModule } from './data/data.module';
 import { TabledataComponent } from './tabledata/tabledata.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SortPipe,
     SearchPipe,
     TabledataComponent,
+    
   
   
   ],

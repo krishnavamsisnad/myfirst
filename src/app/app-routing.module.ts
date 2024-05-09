@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SubDataComponent } from './data/sub-data/sub-data.component';
+
 import { TabledataComponent } from './tabledata/tabledata.component';
 import { ProductdetailesComponent } from './data/productdetailes/productdetailes.component';
+import { SubDataComponent } from './data/sub-data/sub-data.component';
 
 const routes: Routes = [
   {
