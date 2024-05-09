@@ -1,5 +1,5 @@
 <p>sub-data works!</p>
 
-<ul *ngFor="let p of products | search :see">
-    <a routrLink='productdetailes/'>{{p.title}}</a>
-    </ul>
+<li *ngFor="let p of products | search :see">
+    <a [routerLink]="[""]">{{p.title}}</a>
+</li>
