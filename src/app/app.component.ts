@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AppComponent {
   title="vamsi"
- presons:any[]=[]
+ presons:any=[]
   person:FormGroup;
   constructor(public ar:FormBuilder){
     this.person=this.ar.group({
@@ -17,6 +17,7 @@ export class AppComponent {
 
     })
   }
+
   abc(){
     this.presons.push(this.person.value)
   }

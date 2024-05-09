@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent {
-  people:any=[]
+  people:any
 students=[
   {
     name:"vamsi",
