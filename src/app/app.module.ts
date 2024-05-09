@@ -3,18 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DriectivesComponent } from './driectives/driectives.component';
-import { StyleComponent } from './style/style.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodoComponent } from './todo/todo.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DriectivesComponent,
-    StyleComponent
+    TodoComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

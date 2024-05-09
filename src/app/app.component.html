@@ -1,1 +1,22 @@
-<h1 class="text-primary">{{name}}</h1>
+<h1>{{title}}</h1>
+<div [formGroup]="person">
+  <div>
+    <label for="">fname</label>
+    <input type="text" formControlName="fname">
+  </div>
+  <div>
+    <label for="">phone number</label>
+    <input type="text" formControlName="phone">
+  </div>
+  <div>
+    <label for="">collage</label>
+    <input type="text" formControlName="collage">
+  </div>
+  <button (click)="abc()">save</button>
+</div>
+<div  *ngFor="let p of presons">
+<li>{{p.fname}}</li>
+<li>{{p.phone}}</li>
+<li>{{p.collage}}</li>
+</div>
+<app-todo></app-todo>
