@@ -10,7 +10,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let p of products | search :see">
-            <td>{{p.title}}</td>
+            <a routerLink="productdetails">{{p.title}}</a>
             <td>{{p.price}}</td>
             <td><img width="100px" src={{p.image}}/></td>
         </tr>
