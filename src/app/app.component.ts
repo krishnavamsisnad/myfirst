@@ -12,6 +12,7 @@ export class AppComponent {
 cdata:any
 pdata:any
 sdata:any
+parentdata:any
 update(e:any){
   this.cdata=e
 }
@@ -20,5 +21,8 @@ this.pdata=e
 }
 dataupdate(e:any){
 this.sdata=e
+}
+datafromchild(e:any){
+  this.parentdata=e
 }
 }

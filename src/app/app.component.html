@@ -1,7 +1,7 @@
-<app-exmplestyle [x]="data" [y]="dec" (refer)="dataupdate($event)"></app-exmplestyle>
+<app-exmplestyle [x]="data" [y]="dec" (refer)="dataupdate($event) " (pass)="datafromchild($event)"></app-exmplestyle>
 <h1>style:{{sdata}}</h1>
 <app-child (refer)="update($event)" (variable)="updatapraent($event)"> </app-child>
 <h1>send:{{pdata}}</h1>
 <h1>parent data:{{cdata }}</h1>
-
+<h1>{{parentdata}}</h1>
 

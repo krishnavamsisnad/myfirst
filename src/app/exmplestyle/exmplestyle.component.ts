@@ -21,7 +21,9 @@ counter=0
 @Input() x:any
 @Input ()y:any
 @Output() refer=new EventEmitter()
+@Output() pass=new EventEmitter()
 message="hi this is exmple"
+data="vamsi"
 inc(){
   this.counter=this.counter+this.y
 }
@@ -30,6 +32,9 @@ dec(){
 }
 passdata(){
 this.refer.emit(this.message)
+}
+abcd(){
+this.pass.emit(this.data)
 }
 price=43555
 studentname="vamsi"
