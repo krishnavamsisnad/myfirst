@@ -9,6 +9,8 @@ import { CountrysComponent } from './countrys/countrys.component';
 import { ProductsComponent } from './products/products.component';
 import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
 import { ProductdetailesComponent } from './productdetailes/productdetailes.component';
+import { TestService } from './test.service';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { ProductdetailesComponent } from './productdetailes/productdetailes.comp
 
   
   ],
-  providers: [],
+  providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

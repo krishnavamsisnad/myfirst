@@ -1,4 +1,7 @@
 <h1>{{name}}</h1>
+<div *ngfor="let m of mobile">
+    {{m}}
+</div>
 <div>
     <a routerLink="countrys" routerLinkActive="higth">countrys</a>&nbsp;&nbsp;
     <a routerLink="products" routerLinkActive="higth">Products</a>
