@@ -10,6 +10,7 @@ import { ProductsComponent } from './products/products.component';
 import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
 import { ProductdetailesComponent } from './productdetailes/productdetailes.component';
 import { TestService } from './test.service';
+import { TextbigerPipe } from './textbiger.pipe';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { TestService } from './test.service';
     ProductsComponent,
     CountrydetailsComponent,
     ProductdetailesComponent,
+    TextbigerPipe,
     
   ],
   imports: [

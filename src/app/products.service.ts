@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProductsService {
 
   constructor(public http:HttpClient) { 
-  
+    moblies:["redmi"]
   }
   getallproduct(){
     return this.http.get("https://fakestoreapi.com/products")
