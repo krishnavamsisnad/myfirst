@@ -10,7 +10,11 @@ export class ProdutsComponent {
 constructor(public pr:ProductservicesService){
 
 }
-ngOnInit(){
-  this.pr.getAll().subscric
+ngOnInit(): void {
+  this.pr.getAll().subscribe({
+    
+  })
+  
 }
+
 }
