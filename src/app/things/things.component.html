@@ -6,8 +6,8 @@
                 <img   src={{p.image}} class="card-img-top w-50" alt="...">
                 <div class="card-body w-50">
                     <h5 class="card-title">{{p.title}}</h5>
-                    <p class="card-text">content.</p>
-                    <a [routerLink]="['cards',p.id]"  class="btn btn-primary">add to card</a>
+                    <p class="card-text">{{p.price}}</p>
+                  <button  class="btn btn-warning">  <a [routerLink]="['/cards',p.id]"  >add to card</a></button>
                 </div>
             </div>
         

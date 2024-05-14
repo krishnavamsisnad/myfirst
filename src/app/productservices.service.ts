@@ -9,4 +9,7 @@ export class ProductservicesService {
   getAllproducts(){
    return this.http.get("https://fakestoreapi.com/products")
   }
+  getbyid(id:any){
+    return this.http.get(`https://fakestoreapi.com/products/`+id)
+  }
 }
