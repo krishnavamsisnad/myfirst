@@ -7,9 +7,12 @@ import { ProductservicesService } from '../productservices.service';
   styleUrls: ['./things.component.css']
 })
 export class ThingsComponent {
+  products:any
 constructor(public as:ProductservicesService){}
 ngOnInit(){
-  this.as.getAllproducts().subscribe(()=>{})
+  this.as.getAllproducts().subscribe((data:any)=>{
+    this.products=data
+  })
  
 }
 }

@@ -7,13 +7,15 @@ import { CountrysComponent } from './countrys/countrys.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ThingsComponent } from './things/things.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     CountrysComponent,
-      ThingsComponent
+      ThingsComponent,
+      CartComponent
   ],
   imports: [
     BrowserModule,

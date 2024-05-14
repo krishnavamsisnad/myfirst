@@ -7,6 +7,6 @@ export class ProductservicesService {
 
   constructor(public http:HttpClient) { }
   getAllproducts(){
-    this.http.get("https://fakestoreapi.com/products")
+   return this.http.get("https://fakestoreapi.com/products")
   }
 }
