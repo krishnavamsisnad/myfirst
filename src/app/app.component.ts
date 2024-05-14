@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +11,7 @@ export class AppComponent {
   person:FormGroup;
   constructor(public ar:FormBuilder){
     this.person=this.ar.group({
-      fname:[""],
+      fname:["",[Validators.required,Validators.minLength(8)]],
       phone:[''],
       collage:['']
 
