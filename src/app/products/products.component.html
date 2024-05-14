@@ -2,7 +2,7 @@
 <input type="text" [(ngModel)]="see">
 <div>
     <div>
-        <li *ngFor="let p of  products">
+        <li *ngFor="let p of  products ">
         
           <a [routerLink]="['productdetailes',p.id]" [queryParams]="p.products" >{{p.title}}</a>  
         
