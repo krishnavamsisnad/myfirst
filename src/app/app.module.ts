@@ -11,6 +11,7 @@ import { CountrydetailsComponent } from './countrydetails/countrydetails.compone
 import { ProductdetailesComponent } from './productdetailes/productdetailes.component';
 import { TestService } from './test.service';
 import { TextbigerPipe } from './textbiger.pipe';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { TextbigerPipe } from './textbiger.pipe';
     CountrydetailsComponent,
     ProductdetailesComponent,
     TextbigerPipe,
+    SearchPipe,
     
   ],
   imports: [

@@ -8,19 +8,11 @@ import { ProductsService } from '../products.service';
 })
 export class ProductsComponent {
   products:any;
+  see=''
   constructor(public pr:ProductsService){}
   ngOnInit(){
-    this.pr.getallproduct().subscribe({
-      next:(data)=>{
-        console.log(data)
-      this.products=data
-      },
-      error:(err)=>{
-        console.log(err)
-      },
-      complete:()=>{
-
-      }
+    this.pr.getallproduct().subscribe((data)=>{
+  this.products=data
     })
   }
 }

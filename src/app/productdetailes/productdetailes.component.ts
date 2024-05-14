@@ -13,6 +13,7 @@ constructor(public pra:ActivatedRoute){}
   products:any
   productdata:any;
 ngOnInit(){
+  console.log(this.pra)
   this.pra.params.subscribe((qa)=>{
     console.log(qa)
 
@@ -20,7 +21,7 @@ ngOnInit(){
 
     this.pra.queryParams.subscribe((product:any)=>{
       this.productdata=product
-      console.log(product)
+      console.log(this.products)
     
     })
     
