@@ -10,9 +10,11 @@ export class ProdutsComponent {
 constructor(public pr:ProductservicesService){
 
 }
-ngOnInit(): void {
+ngOnInit():void {
   this.pr.getAll().subscribe({
-    
+    next:{
+
+    }
   })
   
 }
