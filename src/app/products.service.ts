@@ -11,5 +11,5 @@ export class ProductsService {
   getallproduct(){
     return this.http.get("https://fakestoreapi.com/products")
   }
-
+      
 }

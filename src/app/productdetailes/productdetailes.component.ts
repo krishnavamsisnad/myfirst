@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { JsonPipe } from '@angular/common';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-productdetailes',
@@ -9,14 +9,15 @@ import { JsonPipe } from '@angular/common';
   styleUrls: ['./productdetailes.component.css']
 })
 export class ProductdetailesComponent {
-constructor(public pra:ActivatedRoute){}
+constructor(public pra:ActivatedRoute,public po:ProductsService){}
   products:any
   productdata:any;
 ngOnInit(){
+
+
   console.log(this.pra)
   this.pra.params.subscribe((qa)=>{
     console.log(qa)
-
     this.products=qa["id"]
 
     this.pra.queryParams.subscribe((product:any)=>{
@@ -24,7 +25,8 @@ ngOnInit(){
       console.log(this.products)
     
     })
-    
+
   })
+
 }
 }
