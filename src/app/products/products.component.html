@@ -1,0 +1,13 @@
+<p>products works!</p>
+<div>
+    <div>
+        <li *ngFor="let p of products">
+        
+          <a [routerLink]="['productdetailes',p.id]" [queryParams]="p.products" >{{p.title}}</a>  
+        
+        </li>
+    </div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
