@@ -11,4 +11,7 @@ students=["vamsi"]
 abc(){
 this.students.push(this.people)
 }
+delet(i:any){
+this.students.splice(i,1)
+}
 }
