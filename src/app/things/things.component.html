@@ -7,10 +7,9 @@
                 <div class="card-body w-50">
                     <h5 class="card-title">{{p.title}}</h5>
                     <p class="card-text">content.</p>
-                    <a routerLink="products/:id" [ queryParams]=p.id  class="btn btn-primary">add to card</a>
+                    <a [routerLink]="['cards',p.id]"  class="btn btn-primary">add to card</a>
                 </div>
             </div>
         
     </div>
 </div>
-<button class="btn-outline-primary">add</button>
