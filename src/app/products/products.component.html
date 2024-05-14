@@ -5,6 +5,7 @@
         <li *ngFor="let p of  products ">
         
           <a [routerLink]="['productdetailes',p.id]" [queryParams]="p.products" >{{p.title}}</a>  
+            
         
         </li>
     </div>
