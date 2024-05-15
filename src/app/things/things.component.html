@@ -1,6 +1,6 @@
 <p>things works!</p>
 <div class="d-flex flex-wrap">
-    <div *ngFor="let p of  products">
+    <div *ngFor="let p of  products |productserach:data">
         
             <div class="card m-2 p-2" style="width: 18rem;">
                 <img   src={{p.image}} class="card-img-top w-50" alt="...">

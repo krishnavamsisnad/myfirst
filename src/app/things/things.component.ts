@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProductservicesService } from '../productservices.service';
 
 @Component({
@@ -7,7 +7,9 @@ import { ProductservicesService } from '../productservices.service';
   styleUrls: ['./things.component.css']
 })
 export class ThingsComponent {
+  @Input() data:any
   products:any
+  
 constructor(public as:ProductservicesService){}
 ngOnInit(){
   this.as.getAllproducts().subscribe((data:any)=>{
