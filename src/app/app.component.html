@@ -2,11 +2,19 @@
 <div [formGroup]="person">
   <div>
     <label for="">fname</label>
-    <input type="text" formControlName="fname">
+    <input type="text" formControlName="fname"><br>
+    <div class="text-danger" *ngIf="person.controls['fname'].invalid && (person.controls['fname'].touched || person.controls['fname'].dirty )">
+      <span *ngIf="person.controls['fname'].errors?.['required']">PLEASE ENTERD</span>
+      <span *ngIf="person.controls['fname'].errors?.['minlength']">ONLY 4 charaters requried</span>
+    </div>
   </div>
   <div>
-    <label for="">phone number</label>
-    <input type="text" formControlName="phone">
+    <label for="">EMAIL</label>
+    <input type="email" formControlName="phone">
+    <div class="text-danger" *ngIf="person.controls['phone'].invalid && (person.controls['phone'].touched || person.controls['phone'].dirty )">
+      <span *ngIf="person.controls['phone'].errors?.['required']">PLEASE ENTERD</span>
+      <span *ngIf="person.controls['phone'].errors?.['email']">EMAIL IS NOT PROPER</span>
+    </div>
   </div>
   <div>
     <label for="">collage</label>
@@ -15,9 +23,13 @@
   <button (click)="abc()">save</button>
 </div>
 
-<div  *ngFor="let p of presons">
-<li>{{p.fname}}</li>
-<li>{{p.phone}}</li>
-<li>{{p.collage}}</li>
+<div>
+  <p>{{people?.fname}}</p>
+  <p>{{people?.phone}}</p>
+  <p>{{people?.collage}}</p>
 </div>
+
 <app-todo></app-todo>
+<app-studentfrom></app-studentfrom>
+<app-employer></app-employer>
+<app-fromgroup></app-fromgroup>

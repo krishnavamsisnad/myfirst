@@ -1,0 +1,15 @@
+<p>Employer form</p>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+   First Name: <input type="text" name="firstname" ngModel required>
+  
+   Last Name: <input type="text" name="lastname" ngModel required>
+   Gender: 
+   <input type="radio" name="gender" value="m" ngModel required>Male
+   <input type="radio" name="gender" value="f" ngModel required>Female
+   <button type="submit">Save</button>
+</form>
+
+<p>First Name: {{ employerdata?.firstname }}</p>
+<p>Last Name: {{ employerdata?.lastname }}</p>
+<p>Gender: {{ employerdata?.gender }}</p>

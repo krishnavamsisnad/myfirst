@@ -7,19 +7,20 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title="vamsi"
- presons:any=[]
+  people:any
   person:FormGroup;
   constructor(public ar:FormBuilder){
     this.person=this.ar.group({
-      fname:["",[Validators.required,Validators.minLength(8)]],
-      phone:[''],
+      fname:["",[Validators.required,Validators.minLength(4)]],
+      phone:['',[Validators.required,Validators.email]],
       collage:['']
 
     })
   }
 
   abc(){
-    this.presons.push(this.person.value)
+    console.log(this.person.value)
+    this.people=this.person.value
   }
 
 }

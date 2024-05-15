@@ -1,0 +1,20 @@
+<p>fromgroup works!</p>
+<div [formGroup]="studentfrom">
+    fristname:<input type="text" formControlName="fristname"><br>
+    <div class="text-danger"      *ngIf="studentfrom.controls['fristname'].invalid && (studentfrom.controls['fristname'].touched || studentfrom.controls['fristname'].dirty)">
+    <span *ngIf="studentfrom.controls['fristname'].errors?.['required']">please enter</span>
+    </div><br><br>
+    lastname:  <input type="text" formControlName="lastname"><br>
+    <div class="text-danger"      *ngIf="studentfrom.controls['lastname'].invalid && (studentfrom.controls['lastname'].touched || studentfrom.controls['lastname'].dirty)">
+        <span *ngIf="studentfrom.controls['lastname'].errors?.['required']">please enter</span>
+        <span *ngIf="studentfrom.controls['lastname'].errors?.['minlength']">Requried 4 charaters only</span>
+        </div>
+  
+    number:<div formArrayName="phonenume">
+        <div *ngFor="let p of phonenume.controls; let i=index">
+            <input type="text" [formControlName]="i">
+        </div>
+    </div>
+    <button (click)="addother()" >add</button>
+    <button (click)="add()">save</button>
+</div>
