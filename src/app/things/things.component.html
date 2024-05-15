@@ -5,7 +5,7 @@
             <div class="card m-2 p-2" style="width: 18rem;">
                 <img   src={{p.image}} class="card-img-top w-50" alt="...">
                 <div class="card-body w-50">
-                    <h5 class="card-title">{{p.title}}</h5>
+                    <b class="card-title">{{p.title}}</b>
                     <p class="card-text">{{p.price}}</p>
                   <button  class="btn btn-warning">  <a [routerLink]="['/cards',p.id]"  >add to card</a></button>
                 </div>

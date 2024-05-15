@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CoutryapiService } from '../coutryapi.service';
 
 @Component({
   selector: 'app-countrys',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./countrys.component.css']
 })
 export class CountrysComponent {
-
+  
+constructor(public cs:CoutryapiService){}
+country:any
+ngOnInit(){
+  this.cs.getcountry().subscribe((data)=>{
+    console.log(data)
+    this.country=data
+  })
+}
 }

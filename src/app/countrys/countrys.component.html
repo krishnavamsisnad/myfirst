@@ -1,1 +1,13 @@
 <p>countrys works!</p>
+<div class="d-flex flex-wrap">
+    <div *ngFor="let c of country">
+        <div class="card m-3 p-3" style="width: 18rem;">
+            <img width="50px" src={{c.flags[0]}} class="card-img-top" alt="...">
+            <div class="card-body">
+              
+              <p class="card-text">{{c.capital}}</p>
+              <a [routerLink]="['/countrydata',c.name.common]" class="btn btn-primary">{{c.name.common}}</a>
+            </div>
+          </div>
+    </div>
+</div>

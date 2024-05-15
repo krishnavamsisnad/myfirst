@@ -1,0 +1,10 @@
+<p>countrydata works!</p>
+<div *ngFor="let c of countrydata">
+
+ <h4>{{c.name.common}}</h4>
+<img width="150px"    src={{c.flags[0]}} alt="">
+<br>
+<b>Capital:{{c.capital}}</b>
+<br>
+  <b> Population:{{c.population}}</b>
+</div>

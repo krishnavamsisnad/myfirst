@@ -6,7 +6,10 @@ import { HttpClient } from '@angular/common/http';
 export class CoutryapiService {
 
   constructor(public http:HttpClient) { }
-  ngOnInit(){
-    this.http.get("")
-  }
+getcountry(){
+  return this.http.get("https://restcountries.com/v3/all")
+}
+getbycname(cname:any){
+  return this.http.get(`https://restcountries.com/v3/name/`+cname)
+}
 }
