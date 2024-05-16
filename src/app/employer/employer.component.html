@@ -2,7 +2,9 @@
 
 <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
    First Name: <input type="text" name="firstname" ngModel required>
-  
+   <div class="text-danger"      *ngIf="userForm.controls['fristname'].invalid && (userForm.controls['fristname'].touched || userForm.controls['fristname'].dirty)">
+    <span *ngIf="userForm.controls['fristname'].errors?.['required']">please enter</span>
+    </div><br><br>
    Last Name: <input type="text" name="lastname" ngModel required>
    Gender: 
    <input type="radio" name="gender" value="m" ngModel required>Male
