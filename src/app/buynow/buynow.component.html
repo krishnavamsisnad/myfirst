@@ -1,3 +1,21 @@
 <p>buynow works!</p>
 <h1>Enter the details </h1>
-
+<div [formGroup]="studentfrom">
+    fristname:<input type="text" formControlName="fristname" placeholder="Fristname"><br>
+    <div class="text-danger"      *ngIf="studentfrom.controls['fristname'].invalid && (studentfrom.controls['fristname'].touched || studentfrom.controls['fristname'].dirty)">
+    <span *ngIf="studentfrom.controls['fristname'].errors?.['required']">please enter</span>
+    </div><br>
+    lastname:  <input type="text" formControlName="lastname" placeholder="Lastname"><br>
+    <div class="text-danger"      *ngIf="studentfrom.controls['lastname'].invalid && (studentfrom.controls['lastname'].touched || studentfrom.controls['lastname'].dirty)">
+        <span *ngIf="studentfrom.controls['lastname'].errors?.['required']">please enter</span>
+        <span *ngIf="studentfrom.controls['lastname'].errors?.['minlength']">Requried 4 charaters only</span>
+        </div>
+  
+        Address:<div formArrayName="phonenume" >
+        <div *ngFor="let p of phonenume.controls; let i=index">
+            <input type="text" [formControlName]="i">
+        </div>
+    </div>
+    <button class="btn-outline-primary"   (click)="addother()" >add</button>
+    <button class="btn-outline-dark" (click)="add()">save</button>
+</div>
