@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,5 +7,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+person:FormGroup
+constructor(public ar:FormBuilder){
+this.person.ar.group({
+  
+})
+}
+
 
 }
