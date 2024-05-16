@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AnticationLayoutComponent } from './layout/antication-layout/antication-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { SharedModule } from './shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

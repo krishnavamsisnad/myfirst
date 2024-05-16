@@ -1,5 +1,15 @@
 <p>login works!</p>
-<form #userfrom="ngForm" (submit)="nsubmit(ngForm)">
 
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    First Name: <input type="text" name="firstname" ngModel required>
+    <div class="text-danger" *ngIf="userForm.controls['firstname'].invalid && userForm.controls['firstname'].errors?.required">
+        <span>Please enter first name</span>
+    </div><br><br>
+    Last Name: <input type="text" name="lastname" ngModel required>
+    Gender: 
+    <input type="radio" name="gender" value="m" ngModel required>Male
+    <input type="radio" name="gender" value="f" ngModel required>Female
+    <button type="submit">Save</button>
 </form>
+
 New user <a [routerLink]="['/singup']">singup</a>
