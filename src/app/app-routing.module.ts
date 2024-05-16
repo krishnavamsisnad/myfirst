@@ -4,6 +4,7 @@ import { ThingsComponent } from './things/things.component';
 import { CartComponent } from './cart/cart.component';
 import { CountrysComponent } from './countrys/countrys.component';
 import { CountrydataComponent } from './countrydata/countrydata.component';
+import { BuynowComponent } from './buynow/buynow.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path:"countrydata/:cname",
     component:CountrydataComponent
+  },
+  {
+    path:'buynow',
+    component:BuynowComponent
   }
 ];
 

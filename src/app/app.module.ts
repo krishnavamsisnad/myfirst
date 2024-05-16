@@ -10,6 +10,7 @@ import { ThingsComponent } from './things/things.component';
 import { CartComponent } from './cart/cart.component';
 import { CountrydataComponent } from './countrydata/countrydata.component';
 import { ProductserachPipe } from './productserach.pipe';
+import { BuynowComponent } from './buynow/buynow.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProductserachPipe } from './productserach.pipe';
       ThingsComponent,
       CartComponent,
       CountrydataComponent,
-      ProductserachPipe
+      ProductserachPipe,
+      BuynowComponent
   ],
   imports: [
     BrowserModule,

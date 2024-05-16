@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductservicesService } from '../productservices.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProductservicesService } from '../productservices.service';
 export class CartComponent {
   product:any
 
-constructor(public router:ActivatedRoute,public pr:ProductservicesService){}
+constructor(public router:ActivatedRoute,public pr:ProductservicesService,public rout:Router){}
 
 ngOnInit(){
 let id=this.router.snapshot.params['id']
@@ -18,6 +18,10 @@ this.pr.getbyid(id).subscribe((data)=>{
   console.log(data)
   this.product=data
 })
+}
+next(){
+  this.rout.navigateByUrl('/buynow')
+
 }
 
 }
