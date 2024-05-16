@@ -8,7 +8,4 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 
-  onSubmit(from:NgForm){
-    console.log(from.value)
-  }
 }
