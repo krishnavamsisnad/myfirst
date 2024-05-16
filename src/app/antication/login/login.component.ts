@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +9,14 @@ import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 export class LoginComponent {
 person:FormGroup
 constructor(public ar:FormBuilder){
-this.person.ar.group({
-  
+this.person=ar.group({
+  fristname:["",[Validators.required]],
+  lastname:["",[Validators.required]]
 })
-}
 
+}
+sub(){
+  console.log(this.person.value)
+}
 
 }

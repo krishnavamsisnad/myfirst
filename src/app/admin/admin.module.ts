@@ -6,6 +6,7 @@ import { EmploerComponent } from './emploer/emploer.component';
 import { CustmerComponent } from './custmer/custmer.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule,SharedModule
+    AdminRoutingModule,SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

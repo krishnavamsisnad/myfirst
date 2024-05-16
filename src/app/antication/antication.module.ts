@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AnticationRoutingModule } from './antication-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SingupComponent } from './singup/singup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { SingupComponent } from './singup/singup.component';
   ],
   imports: [
     CommonModule,
-    AnticationRoutingModule
+    AnticationRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AnticationModule { }

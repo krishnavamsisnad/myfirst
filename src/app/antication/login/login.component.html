@@ -1,7 +1,9 @@
 <p>login works!</p>
 
-<div [fromGroup]="person">
-<input type="text">
-</div>
+<form [formGroup]="person">
+<input type="text" formControlName="fristname" placeholder="UserName"><br><br>
+<input type="text" formControlName="lastname" placeholder="Password"><br><br>
+<button class="btn-dark" (click)="sub()" >login</button>
+</form>
 
 New user <a [routerLink]="['/singup']">singup</a>
