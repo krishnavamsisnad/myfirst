@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myfirst';
+  fromdata:any
+  onsubmit(from:NgForm){
+    console.log(from.value)
+    this.fromdata=from.value
+  }
 }
