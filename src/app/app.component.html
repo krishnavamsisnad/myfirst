@@ -1,15 +1,18 @@
 
-<form (ngSubmit)="onsubmit(login)" #login="ngForm" >
+<form  #login=ngForm >
 <div class="row g-1">
     <div class="col-6">
         <label  for="">fristname:</label>
-        <input type="text" class="form-control" ngModel name="fristname" required #fristname="ngModel">
-        <div *ngIf="fristname.invalid && fristname.dirty || fristname.touched">
-            Requried name
-        </div>
+        <input type="text" class="form-control"  name="fristname"  ngModel required >
+        <div style="color: red;" *ngIf="login.controls['fristname']?.['touched'] && login.controls['fristname']?.['errors']">
+            <div *ngIf="login.controls['fristname']?.['errors']?.['required']" >
+        requrid
+            </div>
+            
+          </div>
     </div>
 </div>
-<button class=" btn btn-info" type="submit">save</button>
+<button class=" btn btn-info" (click)="onsub(login)">save</button>
 </form>
 
 <div>

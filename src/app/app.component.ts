@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   title = 'myfirst';
   fromdata:any
-  onsubmit(from:NgForm){
+  onsub(from:any){
     console.log(from.value)
     this.fromdata=from.value
   }
