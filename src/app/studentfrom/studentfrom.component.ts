@@ -7,10 +7,10 @@ import { FormControl, NgForm } from '@angular/forms';
   styleUrls: ['./studentfrom.component.css']
 })
 export class StudentfromComponent {
- 
+ fristname=""
 
 userfrom:any
-  onSubmit(data:NgForm){
+  onsub(data:any){
 console.log(data.value)
 this.userfrom=data.value
   }

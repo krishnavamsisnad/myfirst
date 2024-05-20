@@ -1,12 +1,29 @@
 <p>studentfrom works!</p>
-<form class="col col-md-6" #userFrom="ngForm" (ngSubmit)="onSubmit(userFrom)">
+<form class="col col-md-6" #userFrom=ngForm>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="fristname" ngModel>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" ngModel required email>
+        <div style="color: red;" *ngIf="userFrom.controls['email']?.['touched'] && userFrom.controls['email']?.['errors']">
+          <div *ngIf="userFrom.controls['email']?.['errors']?.['required']" >
+          Enter email
+          </div>
+          <div *ngIf="userFrom.controls['email']?.['errors']?.['email']">
+              invalid  email
+          </div>
+        </div>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <input class="form-control" id="exampleFormControlTextarea1"name="lastname" ngModel>
+        <input class="form-control" id="exampleFormControlTextarea1" name="lastname" ngModel required minlength="5">
+        <div style="color: red;" *ngIf="userFrom.controls['lastname']?.['touched'] && userFrom.controls['lastname']?.['errors']">
+          <div *ngIf="userFrom.controls['lastname']?.['errors']?.['required']" >
+          *lastname requried
+          </div>
+          <div *ngIf="userFrom.controls['lastname']?.['errors']?.['minlength']">
+              *only 5 requried
+          </div>
+        </div>
+        
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gender" value="male" id="flexRadioDefault1" ngModel>
@@ -20,7 +37,7 @@
         female
         </label>
       </div>
-      <button>subit</button>
+      <button (click)="onsub(userFrom)">subit</button>
 </form>
 <div>
     <p>{{userfrom?.fristname}}</p>
