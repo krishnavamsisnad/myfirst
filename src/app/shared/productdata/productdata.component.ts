@@ -20,6 +20,7 @@ getallproducts(){
 }
 
 delet(id:any){
+  alert("data deleted")
 this.api.deteleapi(id).subscribe((res)=>{
   console.log(res)
   this.getallproducts()
