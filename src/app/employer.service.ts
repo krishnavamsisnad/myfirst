@@ -13,4 +13,7 @@ export class EmployerService {
   addemploy(newemployee:any){
     return this.http.post('http://localhost:3000/posts',newemployee)
   }
+  deleteemploy(id:any){
+    return this.http.delete(`http://localhost:3000/posts/${id}`)
+  }
 }

@@ -8,7 +8,7 @@ import { EmployerService } from '../employer.service';
 })
 export class HomeComponent {
   employdata:any
-  newemploymeid:any
+  employmeid:any
   employnamne:any
   team:any
   phonenumber:any
@@ -25,9 +25,26 @@ getallemplo(){
     }
   })
 }
-addnew(new:any){
-  this.emplo.addemploy(new).subscribe((res)=>{
+addnew(){
+  let newemplo={
+    "id":this.employmeid,
+    "employname":this.employnamne,
+    "team":this.team,
+    "phonenumeber":this.phonenumber,
+    "type":this.type
+  }
+  this.emplo.addemploy(newemplo).subscribe((res)=>{
     console.log(res)
+    this.getallemplo()
   })
+}
+delet(id:any){
+  this.emplo.deleteemploy(id).subscribe((res)=>{
+    console.log(res)
+    this.getallemplo()
+  })
+}
+update(){
+  
 }
 }
