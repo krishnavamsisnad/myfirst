@@ -1,8 +1,17 @@
 <p>productdata works!</p>
 
 
-<div>
-    <div>
+<div class="d-flex flex-wrap">
+    <div *ngFor="let p of data ">
+        
+            <div class="card m-2 p-2" style="width: 18rem;">
+                <img   src={{p.image}} class="card-img-top w-50" alt="...">
+                <div class="card-body w-50">
+                    <b class="card-title">{{p.title}}</b>
+                    <p class="card-text">{{p.price}}</p>
+               <button (click)="delet(p.id)">delete</button>
+                </div>
+            </div>
         
     </div>
 </div>
