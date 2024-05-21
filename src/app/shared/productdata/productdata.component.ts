@@ -11,16 +11,18 @@ export class ProductdataComponent {
   constructor(public api:ProductapiService){}
 ngOnInit(){
   this.getallproducts()
-
-
-
 }
+
 getallproducts(){
   this.api.getproducts().subscribe((res)=>{
     this.data=res
   })
 }
-delet(id:any){
 
+delet(id:any){
+this.api.deteleapi(id).subscribe((res)=>{
+  console.log(res)
+  this.getallproducts()
+})
 }
 }

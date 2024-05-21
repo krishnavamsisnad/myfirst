@@ -10,4 +10,7 @@ export class ProductapiService {
   getproducts(){
     return this.http.get(this.productapi)
   }
+  deteleapi(id:any){
+    return this.http.delete(`${this.productapi},${id}`)
+  }
 }
