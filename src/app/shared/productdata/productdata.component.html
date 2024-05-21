@@ -1,6 +1,6 @@
 <p>productdata works!</p>
 
-
+<button (click)="add()">Add Products</button>
 <div class="d-flex flex-wrap">
     <div *ngFor="let p of data ">
         
@@ -10,6 +10,7 @@
                     <b class="card-title">{{p.title}}</b>
                     <p class="card-text">{{p.price}}</p>
                <button (click)="delet(p.id)">delete</button>
+             
                 </div>
             </div>
         

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductapiService } from '../productapi.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productdata',
@@ -8,7 +9,7 @@ import { ProductapiService } from '../productapi.service';
 })
 export class ProductdataComponent {
   data:any
-  constructor(public api:ProductapiService){}
+  constructor(public api:ProductapiService,public r:Router){}
 ngOnInit(){
   this.getallproducts()
 }
@@ -25,5 +26,8 @@ this.api.deteleapi(id).subscribe((res)=>{
   console.log(res)
   this.getallproducts()
 })
+}
+add(){
+this.r.navigateByUrl('/addproduct')
 }
 }

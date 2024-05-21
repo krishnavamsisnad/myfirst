@@ -6,12 +6,14 @@ import { ProdutsComponent } from './produts/produts.component';
 import { FormsModule } from '@angular/forms';
 import { ProductdataComponent } from './productdata/productdata.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddproductsComponent } from './addproducts/addproducts.component';
 
 
 @NgModule({
   declarations: [
     ProdutsComponent,
-    ProductdataComponent
+    ProductdataComponent,
+    AddproductsComponent
   ],
   imports: [
     CommonModule,
