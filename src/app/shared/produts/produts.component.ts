@@ -9,7 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProdutsComponent {
   constructor( public Rout:Router){}
 sub(data:any){
-  console.log(data.value)
+
+console.log(data)
 this.Rout.navigateByUrl('/productdata')
 }
 

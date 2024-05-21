@@ -5,6 +5,7 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { ProdutsComponent } from './produts/produts.component';
 import { FormsModule } from '@angular/forms';
 import { ProductdataComponent } from './productdata/productdata.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ProductdataComponent } from './productdata/productdata.component';
   imports: [
     CommonModule,
     SharedRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }
