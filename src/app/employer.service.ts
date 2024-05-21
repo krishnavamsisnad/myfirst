@@ -16,4 +16,7 @@ export class EmployerService {
   deleteemploy(id:any){
     return this.http.delete(`http://localhost:3000/posts/${id}`)
   }
+  updateemploy(id:any,newemployee:any){
+    return this.http.put(`http://localhost:3000/posts/${id}`,newemployee)
+  }
 }
