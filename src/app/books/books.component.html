@@ -1,1 +1,19 @@
 <p>books works!</p>
+<input type="text" [(ngModel)]="bookId"><br>
+
+<input type="text" [(ngModel)]="booktitle"><br>
+<button (click)="addnew()">add new </button>
+<button (click)="update()">update</button>
+<table>
+    <tr>
+        <th>id</th>
+        <th>tittle</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let b of book">
+        <td>{{b.id}}</td>
+        <td>{{b.title}}</td>
+        <td><button (click)="deleted(b.id)">delet</button></td>
+        <td><button  (click)="editbook(b)" >edit</button></td>
+    </tr>
+</table>
