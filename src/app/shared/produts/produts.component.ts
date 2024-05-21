@@ -7,9 +7,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./produts.component.css']
 })
 export class ProdutsComponent {
-  constructor(Route:ActivatedRoute){}
+  constructor( public Rout:Router){}
 sub(data:any){
   console.log(data.value)
-
+this.Rout.navigateByUrl('/productdata')
 }
+
 }
