@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="" >
+    <form action="" #user=ngForm class="shadow-lg">
+        <div class="row-gap-2">
+            <div class="col-4">
+                <input type="text" name="user"  ngModel  class="form-control" required><br>
+              </div>
+              <div class="col-4">
+                <input type="text" name="password" class="form-control" ngModel required><br>
+              </div>
+        </div>
+        <button (click)="sub(user)">Login</button>
+    </form>
+</div>

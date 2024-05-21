@@ -7,7 +7,7 @@ const routes: Routes = [
     path:'',component:HomeComponent
   },
   {
-    path:"shared",loadChildren:()=>{import("./shared/shared.module").then(x=>x.SharedModule)}
+    path:"shared",loadChildren:()=>import("./shared/shared.module").then(x=>x.SharedModule)
   }
 ];
 
