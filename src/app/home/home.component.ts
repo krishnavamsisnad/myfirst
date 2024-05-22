@@ -44,6 +44,12 @@ delet(id:any){
     this.getallemplo()
   })
 }
+edit(newemploy:any){
+this.employmeid=newemploy.id,
+this.employnamne=newemploy.employname
+this.team=newemploy.team
+
+}
 update(){
   
 }
