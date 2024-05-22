@@ -2,10 +2,10 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand">Navbar</a>
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" [(ngModel)]="see" placeholder="Search" aria-label="Search" >
-      <button class="btn btn-success"  (click)="logout()">Login</button>
-    </form>
+    <div class="d-flex">
+      <input class="form-control me-2"  [(ngModel)]="see" placeholder="Search"  >
+      <button class="btn btn-success"  (click)="logout()">Logout</button>
+    </div>
   </div>
 </nav>
 <button (click)="add()">Add Products</button>
