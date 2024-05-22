@@ -17,6 +17,6 @@ api:any='`http://localhost:3000/posts'
     return this.http.delete(`http://localhost:3000/posts/${id}`)
   }
   updateemploy(id:any,newemployee:any){
-    return this.http.put(this.api)
+    return this.http.put(`${this.api}/${id}`,newemployee)
   }
 }

@@ -30,7 +30,7 @@ addnew(){
     "id":this.employmeid,
     "employname":this.employnamne,
     "team":this.team,
-    "phonenumeber":this.phonenumber,
+    "phonenumber":this.phonenumber,
     "type":this.type
   }
   this.emplo.addemploy(newemplo).subscribe((res)=>{
@@ -59,11 +59,12 @@ update(){
     "id":this.employmeid,
     "employname":this.employnamne,
     "team":this.team,
-    "phonenumeber":this.phonenumber,
+    "phonenumber":this.phonenumber,
     "type":this.type
   }
   this.emplo.updateemploy(this.employmeid,updateemploy).subscribe((res)=>{
-    console.log(res)
+    console.log(updateemploy)
+    console.log(this.employmeid)
     this.getallemplo()
   })
 }
