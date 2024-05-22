@@ -55,13 +55,18 @@ edit(p:any){
     this.formdata.controls['price'].setValue(p.price)
 }
 update(){
-  let updateproduct={
-  "id":this.formdata.value.id,
-  "title":this.formdata.value.title,
-  "image":this.formdata.value.image,
-  "price":this.formdata.value.proce
-  }
-  this.api.updateapi(updateproduct,updateproduct.id).subscribe((res)=>{
+  alert("hi")
+  this.data.id=this.formdata.value.id
+  this.data.title=this.formdata.value.title
+
+  // let updateproduct={
+    
+  // // "id":this.formdata.value.id,
+  // // "title":this.formdata.value.title,
+  // // "image":this.formdata.value.image,
+  // // "price":this.formdata.value.price
+  // }
+  this.api.updateapi(this.data,this.data.id).subscribe((res)=>{
 console.log(res)
 this.getallproducts()
   })
