@@ -62,6 +62,7 @@ update(){
     "phonenumber":this.phonenumber,
     "type":this.type
   }
+  console.log(updateemploy)
   this.emplo.updateemploy(this.employmeid,updateemploy).subscribe((res)=>{
     console.log(updateemploy)
     console.log(this.employmeid)
