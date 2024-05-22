@@ -58,6 +58,7 @@ update(){
   alert("hi")
   this.data.id=this.formdata.value.id
   this.data.title=this.formdata.value.title
+  console.log(this.data.id)
 
   // let updateproduct={
     
