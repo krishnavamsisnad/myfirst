@@ -19,7 +19,7 @@ export class AddproductsComponent {
     })
   }
 onsub(){
-this.http.post('http://localhost:3000/newproducts',this.fromdata.value).subscribe((res)=>{
+this.http.post('http://localhost:3000/products',this.fromdata.value).subscribe((res)=>{
   alert("succuesfuly added")
 })
 }
