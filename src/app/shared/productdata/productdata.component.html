@@ -11,7 +11,7 @@
                     <b class="card-title">{{p.title}}</b>
                     <p class="card-text">{{p.price}}</p>
                <button    class="bi bi-trash-fill" (click)="delet(p.id)"></button>
-               <button (click)="edit()"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">edit</button>
+               <button (click)="edit(p)"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">edit</button>
              
                 </div>
             </div>
@@ -29,13 +29,36 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-        <form action="">
-          
+        <form [formGroup]="formdata">
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Product Id</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control" formControlName="id" id="staticEmail" >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Product Tittle</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control" formControlName="title" id="staticEmail" >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Product IMAGE</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control" formControlName="image" id="staticEmail" >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Product Prince</label>
+            <div class="col-sm-10">
+              <input type="text"  class="form-control" formControlName="price" id="staticEmail" >
+            </div>
+          </div>
         </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" (click)="update()">update</button>
         </div>
       </div>
     </div>
