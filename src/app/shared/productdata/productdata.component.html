@@ -10,8 +10,8 @@
                 <div class="card-body w-50">
                     <b class="card-title">{{p.title}}</b>
                     <p class="card-text">{{p.price}}</p>
-               <button    class="bi bi-trash-fill" (click)="delet(p.id)"></button>
-               <button (click)="edit(p)"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">edit</button>
+               <button    class="bi bi-trash-fill" (click)="delet(p.id)"></button>&nbsp;
+               <button (click)="edit(p)"  type="button" class="bi bi-pencil-fill"  data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
              
                 </div>
             </div>
@@ -57,7 +57,7 @@
         </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="update()" >update</button>
         </div>
       </div>

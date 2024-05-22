@@ -55,20 +55,21 @@ edit(p:any){
     this.formdata.controls['price'].setValue(p.price)
 }
 update(){
-  alert("hi")
+  alert("Upadte sucessfully")
   this.data.id=this.formdata.value.id
   this.data.title=this.formdata.value.title
+  this.data.image=this.formdata.value.image
+  this.data.price=this.formdata.value.price
   console.log(this.data.id)
+  console.log(this.data.title)
 
-  // let updateproduct={
-    
-  // // "id":this.formdata.value.id,
-  // // "title":this.formdata.value.title,
-  // // "image":this.formdata.value.image,
-  // // "price":this.formdata.value.price
-  // }
   this.api.updateapi(this.data,this.data.id).subscribe((res)=>{
 console.log(res)
+
+
+let ref=document.getElementById('cancel')
+ref?.click()
+this.formdata.reset()
 this.getallproducts()
   })
 }
