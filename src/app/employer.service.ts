@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EmployerService {
-
+api:any='`http://localhost:3000/posts'
   constructor(public http:HttpClient) { }
   getemploer(){
     return this.http.get('http://localhost:3000/posts')
@@ -17,6 +17,6 @@ export class EmployerService {
     return this.http.delete(`http://localhost:3000/posts/${id}`)
   }
   updateemploy(id:any,newemployee:any){
-    return this.http.put(`http://localhost:3000/posts/${id}`,newemployee)
+    return this.http.put(this.api)
   }
 }
