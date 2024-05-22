@@ -39,6 +39,7 @@ addnew(){
   })
 }
 delet(id:any){
+  alert("Deleted success")
   this.emplo.deleteemploy(id).subscribe((res)=>{
     console.log(res)
     this.getallemplo()
@@ -53,6 +54,17 @@ this.type=newemploy.type
 
 }
 update(){
-  
+  alert("Update sucees")
+  let updateemploy={
+    "id":this.employmeid,
+    "employname":this.employnamne,
+    "team":this.team,
+    "phonenumeber":this.phonenumber,
+    "type":this.type
+  }
+  this.emplo.updateemploy(updateemploy,this.employmeid).subscribe((res)=>{
+    console.log(res)
+    this.getallemplo()
+  })
 }
 }
