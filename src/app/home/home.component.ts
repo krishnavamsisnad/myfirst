@@ -64,8 +64,8 @@ update(){
   }
   console.log(updateemploy)
   this.emplo.updateemploy(this.employmeid,updateemploy).subscribe((res)=>{
-    console.log(updateemploy)
-    console.log(this.employmeid)
+    // console.log(updateemploy)
+    // console.log(this.employmeid)
     this.getallemplo()
   })
 }
