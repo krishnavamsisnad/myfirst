@@ -1,15 +1,16 @@
 <p>produts works!</p>
 <div class="main" >
-    <form action="" #user=ngForm class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center " >
+    <b>please Rigestion</b>
+    <form  [formGroup]="fromdata" (ngSubmit)="onsingup()" class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center " >
         <div class="row-gap-2">
             <div class="col-10">
-             username:   <input type="text" name="user"  ngModel  class="form-control" required><br>
+             username:   <input type="text" name="user" formControlName="username"  ngModel  class="form-control" required><br>
               </div>
               <div class="col-10">
-             password:  <input type="text" name="password" class="form-control" ngModel required><br>
+             password:  <input type="text" name="password" formControlName="password"   class="form-control" ngModel required><br>
               </div>
               <div >
-                <button (click)="sub(user)" >Regiter</button>
+                <button class="btn btn-danger" type="submit" >Regiter</button>
               </div>
    
           
