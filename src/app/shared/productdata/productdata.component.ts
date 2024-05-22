@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class ProductdataComponent {
   data:any
 userdata:any
+see=''
 formdata!:FormGroup
   constructor(public api:ProductapiService,public r:Router,public http:HttpClient,public form:FormBuilder){}
 ngOnInit(){

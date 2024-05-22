@@ -7,13 +7,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductdataComponent } from './productdata/productdata.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddproductsComponent } from './addproducts/addproducts.component';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
   declarations: [
     ProdutsComponent,
     ProductdataComponent,
-    AddproductsComponent
+    AddproductsComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,

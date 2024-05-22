@@ -3,15 +3,15 @@
   <div class="container-fluid">
     <a class="navbar-brand">Navbar</a>
     <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
-      <button class="btn btn-success" type="submit" (click)="logout()">Login</button>
+      <input class="form-control me-2" type="search" [(ngModel)]="see" placeholder="Search" aria-label="Search" >
+      <button class="btn btn-success"  (click)="logout()">Login</button>
     </form>
   </div>
 </nav>
 <button (click)="add()">Add Products</button>
 <h1 >{{userdata.username}}</h1>
 <div class="d-flex flex-wrap">
-    <div *ngFor="let p of data ">
+    <div *ngFor="let p of data |search :see">
         
             <div class="card m-2 p-2" style="width: 18rem;">
                 <img   src={{p.image}} class="card-img-top w-50" alt="...">
