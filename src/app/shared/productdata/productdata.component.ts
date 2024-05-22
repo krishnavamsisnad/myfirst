@@ -55,7 +55,16 @@ edit(p:any){
     this.formdata.controls['price'].setValue(p.price)
 }
 update(){
-  
+  let updateproduct={
+  "id":this.formdata.value.id,
+  "title":this.formdata.value.title,
+  "image":this.formdata.value.image,
+  "price":this.formdata.value.proce
+  }
+  this.api.updateapi(updateproduct,updateproduct.id).subscribe((res)=>{
+console.log(res)
+this.getallproducts()
+  })
 }
 
 }

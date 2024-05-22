@@ -13,4 +13,7 @@ export class ProductapiService {
   deteleapi(id:any){
     return this.http.delete(`${this.productapi}/${id}`)
   }
+  updateapi(id:any,product:any){
+    return this.http.put(`${this.productapi}/${id}`,product)
+  }
 }
