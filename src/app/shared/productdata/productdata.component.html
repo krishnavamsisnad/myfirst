@@ -1,14 +1,14 @@
 <p>productdata works!</p>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand">Navbar</a>
+    <a class="navbar-brand text-white">Products</a>
     <div class="d-flex">
       <input class="form-control me-2"  [(ngModel)]="see" placeholder="Search"  >
       <button class="btn btn-success"  (click)="logout()">Logout</button>
     </div>
   </div>
 </nav>
-<button (click)="add()">Add Products</button>
+<button class="btn btn-primary" (click)="add()">Add Products</button>
 <h1 >{{userdata.username}}</h1>
 <div class="d-flex flex-wrap">
     <div *ngFor="let p of data |search :see">
