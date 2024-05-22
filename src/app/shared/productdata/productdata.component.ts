@@ -73,5 +73,8 @@ this.formdata.reset()
 this.getallproducts()
   })
 }
+logout(){
+  this.r.navigateByUrl('/')
+}
 
 }

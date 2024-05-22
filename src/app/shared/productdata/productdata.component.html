@@ -1,5 +1,13 @@
 <p>productdata works!</p>
-
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+      <button class="btn btn-success" type="submit" (click)="logout()">Login</button>
+    </form>
+  </div>
+</nav>
 <button (click)="add()">Add Products</button>
 <h1 >{{userdata.username}}</h1>
 <div class="d-flex flex-wrap">
