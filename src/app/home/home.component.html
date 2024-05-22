@@ -1,20 +1,23 @@
-<div class="main" >
-    <form [formGroup]="fromdata"  (ngSubmit)="login()" class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center " >
-        <div class="row-gap-2">
-            <div class="col-10">
-             username:   <input type="email" name="user" formControlName="username"  ngModel  class="form-control" required><br>
-
-              </div>
-              <div class="col-10">
-             password:  <input type="text" name="password" formControlName="password" class="form-control" ngModel required><br>
-              </div>
-              <div >
-                <button class="bt btn-dark" type="submit" >Login</button>
-              </div>
-              <a  routerLink="shared">
-               click to newuser?
-                </a>
-        </div><br>
-       
-    </form>
+<div class="login">
+    <div class="main" >
+        <form [formGroup]="fromdata"  (ngSubmit)="login()" class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center " >
+            <div class="row-gap-2">
+                <h1 class="bi bi-person-circle d-flex align-items-center justify-content-center"></h1>
+                <div class="col-10">
+                    Username:   <input type="email" name="user" formControlName="username"  ngModel  class="form-control" required><br>
+    
+                  </div>
+                  <div class="col-10">
+                 Password:  <input type="text" name="password" formControlName="password" class="form-control" ngModel required><br>
+                  </div>
+                  <div >
+                    <button class="bt btn-dark" type="submit" >Login</button>
+                  </div>
+                  <a  routerLink="shared">
+                   click to newuser?
+                    </a>
+            </div><br>
+           
+        </form>
+    </div>
 </div>

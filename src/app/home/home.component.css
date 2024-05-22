@@ -4,3 +4,8 @@
     align-items: center;
     height: 100vh;
 }
+.login{
+    background-image: url("https://th.bing.com/th/id/OIP.8Xdx0h73TTYvbQNfSe5wUgHaEK?w=258&h=180&c=7&r=0&o=5&pid=1.7");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
