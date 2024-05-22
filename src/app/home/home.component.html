@@ -42,6 +42,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" (click)="addnew()">Add new Employee</button>
+          <button type="button" class="btn btn-primary" (click)="update()">Add new Employee</button>
         </div>
       </div>
     </div>
@@ -72,7 +73,7 @@
   </i>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     
-    <button (click)="edit()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button (click)="edit(e)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
       edit
      </button>
 
