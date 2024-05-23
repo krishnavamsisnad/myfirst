@@ -19,8 +19,8 @@ export class AddproductsComponent {
     })
   }
 onsub(){
-this.http.post('http://localhost:3000/products',this.fromdata.value).subscribe((res)=>{
-  alert("succuesfuly added")
-})
+// this.http.post('http://localhost:3000/products',this.fromdata.value).subscribe((res)=>{
+//   alert("succuesfuly added")
+// })
 }
 }

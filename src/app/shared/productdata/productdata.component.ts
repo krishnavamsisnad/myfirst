@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./productdata.component.css']
 })
 export class ProductdataComponent {
-  data:any
+  data:any={}
 userdata:any
   see=''
 formdata!:FormGroup
@@ -64,16 +64,34 @@ update(){
   console.log(this.data.id)
   console.log(this.data.title)
 
-  this.api.updateapi(this.data,this.data.id).subscribe((res)=>{
-console.log(res)
+//   this.api.updateapi(this.data,this.data.id).subscribe((res)=>{
+// console.log(res)
 
 
-let ref=document.getElementById('cancel')
-ref?.click()
-this.formdata.reset()
-this.getallproducts()
-  })
+// let ref=document.getElementById('cancel')
+// ref?.click()
+// this.formdata.reset()
+// this.getallproducts()
+//   })
+this.api.updateapi(this.data, this.data.id).subscribe(
+  (res:any) => {
+    console.log('API Response:', res);
+    let ref = document.getElementById('cancel');
+    if (ref) {
+      ref.click();
+    } else {
+      console.warn('Cancel button not found');
+    }
+    this.formdata.reset();
+    this.getallproducts();
+  },
+  (error) => {
+    console.error('Update failed', error);
+    alert('Update failed: ' + error.message); // Show an alert with the error message
+  }
+);
 }
+
 logout(){
   this.r.navigateByUrl('/')
 }
