@@ -7,7 +7,8 @@ const routes: Routes = [
     path:"",component:HomeComponent
   },
   {
-    path:"singup", loadChildren:()=>import 
+    
+    path:"singin",loadChildren:()=>import("./employe/employe.module").then(x=>x.EmployeModule)
   }
 ];
 
