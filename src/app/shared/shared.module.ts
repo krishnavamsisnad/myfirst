@@ -9,13 +9,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddproductsComponent } from './addproducts/addproducts.component';
 import { SearchPipe } from './search.pipe';
 
+import { EmploydashbordComponent } from './employdashbord/employdashbord.component';
+import { ManagerdashboardComponent } from './managerdashboard/managerdashboard.component';
+
 
 @NgModule({
   declarations: [
     ProdutsComponent,
     ProductdataComponent,
     AddproductsComponent,
-    SearchPipe
+    SearchPipe,
+
+    EmploydashbordComponent,
+    ManagerdashboardComponent
   ],
   imports: [
     CommonModule,

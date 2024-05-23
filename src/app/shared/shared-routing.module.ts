@@ -9,7 +9,9 @@ const routes: Routes = [
   {path:'productdata',component:ProductdataComponent},
   {
     path:"addproduct",component:AddproductsComponent
-  }
+  },
+  
+
 ];
 
 @NgModule({

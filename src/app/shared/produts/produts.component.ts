@@ -14,13 +14,15 @@ export class ProdutsComponent {
   ngOnInit(){
     this.fromdata=this.fr.group({
       username:[""],
-      password:['']
+      password:[''],
+      role:['']
     })
   }
   onsingup(){
     this.http.post('http://localhost:3000/singin',this.fromdata.value).subscribe((res)=>{
       alert("suceesfully Rigerstions")
       this.Rout.navigateByUrl('')
+    
     })
   }
 // sub(data:any){

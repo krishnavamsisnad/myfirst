@@ -39,7 +39,7 @@ export class HomeComponent {
         error: (err) => {
         
           console.error('Error fetching users:', err);
-          this.errorMessage = ' Please try again later.';
+          this.errorMessage = 'An error occurred. Please try again later.';
         }
       });
     } 
