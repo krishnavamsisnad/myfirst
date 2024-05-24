@@ -11,12 +11,19 @@ import { Route, Router } from '@angular/router';
 export class HomeComponent {
   username=""
   passwoard=""
+  role=""
+  userdata:any
   constructor(public http:HttpClient,public router:Router){}
 login(user:NgForm){ 
   this.http.get('http://localhost:3000/singin').subscribe((res)=>{
     console.log(res)
+    this.userdata=res
+    if(this.userdata.password===user.value.passwoard){
+      this.router.navigateByUrl('/dashboard')
+    }
+    
     
   })
-  console.log(user.value)
+ 
 }
 }

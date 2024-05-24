@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class SingupComponent {
   username=""
   passwoard=""
+  role=""
   constructor(public http:HttpClient,public r:Router){}
   singin(f:NgForm){
     this.http.post('http://localhost:3000/singin',f.value).subscribe((res)=>{
