@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-singup',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./singup.component.css']
 })
 export class SingupComponent {
+  username=""
+  passwoard=""
+  constructor(){}
+  singin(f:NgForm){
+    
+  }
 
 }
