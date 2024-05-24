@@ -5,7 +5,7 @@ import { EmployeRoutingModule } from './employe-routing.module';
 import { DetailesComponent } from './detailes/detailes.component';
 import { SingupComponent } from './singup/singup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     EmployeRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule
     
   ]
 })

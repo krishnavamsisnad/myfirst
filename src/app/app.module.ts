@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {ToastrModule} from "ngx-toastr";
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     ReactiveFormsModule,
     ToastrModule,
     FormsModule,
+    HttpClientModule
   
   
   ],

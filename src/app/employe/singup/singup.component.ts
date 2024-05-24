@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-singup',
   templateUrl: './singup.component.html',
@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 export class SingupComponent {
   username=""
   passwoard=""
-  constructor(){}
+  constructor(public http:HttpClient){}
   singin(f:NgForm){
     
   }
