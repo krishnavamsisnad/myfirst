@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     
-    path:"singin",loadChildren:()=>import("./employe/employe.module").then(x=>x.EmployeModule)
+    path:'singin',loadChildren:()=>import("./employe/employe.module").then(x=>x.EmployeModule)
   }
 ];
 
