@@ -15,17 +15,17 @@ export class HomeComponent {
   userdata:any
   loacldata:any
   constructor(public http:HttpClient,public router:Router){}
+  ngOnInit(){
+    const data = JSON.parse(localStorage.getItem('user') || '{}');
+    this.loacldata=data
+    
+  }
 login(user:NgForm){ 
   this.http.get('http://localhost:3000/singin').subscribe((res)=>{
     console.log(res)
     this.userdata=res
-    const data=localStorage.getItem("user")
-   
-    if(this.userdata.password===user.value.passwoard){
-      this.router.navigateByUrl('/dashboard')
-    }
-    
-    
+    const  login=this.loacldata.find((a:any)=>{a.username==this.userdata.username && a.password==this.userdata.password })
+  
   })
 
  
