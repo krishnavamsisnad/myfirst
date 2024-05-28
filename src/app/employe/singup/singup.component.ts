@@ -16,6 +16,7 @@ export class SingupComponent {
     this.http.post('http://localhost:3000/singin',f.value).subscribe((res)=>{
       console.log(res)
       this.r.navigateByUrl('')
+      localStorage.setItem('user',JSON.stringify(f.value))
   })
   }
 
