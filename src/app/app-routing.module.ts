@@ -4,12 +4,16 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ResigtertionComponent } from './resigtertion/resigtertion.component';
 import { UserComponent } from './user/user.component';
+import { ActivedashboardComponent } from './activedashboard/activedashboard.component';
+import { DiactivedashboardComponent } from './diactivedashboard/diactivedashboard.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
-  {path:"login",component:LoginComponent},
+  {path:"home",component:HomeComponent},
+  {path:"",component:LoginComponent},
   {path:"register",component:ResigtertionComponent},
-  {path:"user",component:UserComponent}
+  {path:"user",component:UserComponent},
+  {path:"activedashboard",component:ActivedashboardComponent},
+  {path:"diactivedboard",component:DiactivedashboardComponent}
 ];
 
 @NgModule({

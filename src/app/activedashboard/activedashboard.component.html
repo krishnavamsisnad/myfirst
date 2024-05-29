@@ -1,0 +1,21 @@
+<h1>Activedashboard</h1>
+<table class="table">
+    <thead>
+      <tr>
+      <th>Employee name</th>
+      <th>Phone number</th>
+      <th>Gender</th>
+      <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of  activeUsers">
+        
+        <td>{{a.username}}</td>
+        <td>{{a.numbers}}</td>
+        <td>{{a.gender}}</td>
+        <td>{{a.employeactive}}</td>
+      </tr>
+     
+    </tbody>
+  </table>

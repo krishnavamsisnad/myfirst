@@ -22,7 +22,7 @@ submitform(singform:NgForm){
  if(singform.valid){
   this.auth.singinuser(singform.value).subscribe((res)=>{
     this.toas.success("Register succfully")
-    this.r.navigateByUrl('login')
+    this.r.navigateByUrl('')
   })
  }
  else{

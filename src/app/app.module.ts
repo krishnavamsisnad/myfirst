@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ActivedashboardComponent } from './activedashboard/activedashboard.component';
+import { DiactivedashboardComponent } from './diactivedashboard/diactivedashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     ResigtertionComponent,
     UpdatepopupComponent,
-    HomeComponent
+    HomeComponent,
+    ActivedashboardComponent,
+    DiactivedashboardComponent
   ],
   imports: [
     BrowserModule,

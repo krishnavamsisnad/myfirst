@@ -26,8 +26,8 @@ export class LoginComponent {
         const user = this.userdata.find((u: any) => u.username === loginform.value.username && u.password === loginform.value.password);
         if(user){
           if(user.employeactive){
-            localStorage.setItem('username',user.id)
-            this.r.navigateByUrl('')
+            localStorage.setItem('username',user.employeactive)
+            this.r.navigateByUrl('/home')
             this.toas.success("login sucess")
           }
           else{
