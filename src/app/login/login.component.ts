@@ -15,10 +15,11 @@ export class LoginComponent {
   userdata:any
   constructor(public toas:ToastrService,public auth:AuthService,public r:Router){
     localStorage.clear()
+ 
   }
   submitedform(loginform:NgForm){
     if(loginform.valid){
-     
+  
       this.auth.getbyuser(loginform.value.username).subscribe((res)=>{
         this.userdata=res
         // console.log(this.userdata)
@@ -37,9 +38,14 @@ export class LoginComponent {
         else{
           this.toas.error('invalid detailes')
         }
+        loginform.reset();
+        this.username = '';
+        this.password = '';
+        this.userdata = null;
       })
      }
 
   }
+  
 }
 
