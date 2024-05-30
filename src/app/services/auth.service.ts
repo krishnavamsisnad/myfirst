@@ -20,6 +20,9 @@ export class AuthService {
   updateuser(id:any,newuser:any){
     return this.http.put(`${this.apiurl}/${id}`,newuser)
   }
+  deletuser(id:any){
+    return this.http.delete(`${this.apiurl}/${id}`)
+  }
   IsLogin(){
     return localStorage.getItem('username')!=null
   }

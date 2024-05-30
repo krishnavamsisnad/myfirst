@@ -60,4 +60,7 @@ export class HomeComponent implements OnInit {
       console.error('Error updating user:', error);
     });
   }
+  delet(){
+    this.auth.deletuser()
+  }
 }

@@ -26,9 +26,23 @@
         <td>{{a.numbers}}</td>
         <td>{{a.gender}}</td>
         <td>{{a.employeactive}}</td>
-        <td><i type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="edit(a)">
-            <i class="bi bi-three-dots-vertical"></i>
-        </i></td>
+        <td><div class="dropdown">
+          <i class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-three-dots-vertical">
+              
+            </i>
+          </i>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            
+            <button (click)="edit(a)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              edit
+             </button>
+        
+            
+            <li><a class="dropdown-item"  (click)="delet()">delete</a></li>
+            
+          </ul>
+        </div></td>
       </tr>
      
     </tbody>
