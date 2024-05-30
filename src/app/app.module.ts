@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivedashboardComponent } from './activedashboard/activedashboard.component';
 import { DiactivedashboardComponent } from './diactivedashboard/diactivedashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DiactivedashboardComponent } from './diactivedashboard/diactivedashboar
     UpdatepopupComponent,
     HomeComponent,
     ActivedashboardComponent,
-    DiactivedashboardComponent
+    DiactivedashboardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

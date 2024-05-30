@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
   gender: any;
   employeactive: any;
 
-  constructor(private router: Router, public auth: AuthService) { }
+  constructor(private router: Router, public auth: AuthService,public toast:ToastrService) { }
 
   ngOnInit() {
     this.getall();
@@ -52,6 +53,7 @@ export class HomeComponent implements OnInit {
     };
     console.log('Updating employee:', employee);
     this.auth.updateuser(this.id, employee).subscribe((res) => {
+      this.toast.success("updated succfully")
       console.log('Update response:', res);
       this.getall();
     }, (error) => {

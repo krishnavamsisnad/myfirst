@@ -1,17 +1,20 @@
 <p>login works!</p>
-<form  #loginform="ngForm" (ngSubmit)="submitedform(loginform)">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Username</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" #usernames="ngModel" [(ngModel)]="username">
-      <div id="emailHelp" class="form-text"></div>
+<form  #loginform="ngForm" (ngSubmit)="submitedform(loginform)"  class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center ">
+    <div class="row">
+      <div class="col-8">
+        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" #usernames="ngModel" [(ngModel)]="username">
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="col-8">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password" #passwords="ngModel" [(ngModel)]="password">
+      </div>
+      <br>
+    <div class="col-8">
+      <button type="submit" class="btn btn-primary">login</button>&nbsp;
+      <button routerLink="/register" class="btn btn-primary">New User?</button>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" name="password" #passwords="ngModel" [(ngModel)]="password">
     </div>
-   
-
-    <button type="submit" class="btn btn-primary">login</button>&nbsp;
-    <button routerLink="/register" class="btn btn-primary">New User?</button>
 
   </form>

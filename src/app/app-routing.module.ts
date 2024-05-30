@@ -6,6 +6,7 @@ import { ResigtertionComponent } from './resigtertion/resigtertion.component';
 import { UserComponent } from './user/user.component';
 import { ActivedashboardComponent } from './activedashboard/activedashboard.component';
 import { DiactivedashboardComponent } from './diactivedashboard/diactivedashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:"register",component:ResigtertionComponent},
   {path:"user",component:UserComponent},
   {path:"activedashboard",component:ActivedashboardComponent},
-  {path:"diactivedboard",component:DiactivedashboardComponent}
+  {path:"diactivedboard",component:DiactivedashboardComponent},
+  {path:"dashboard",component:DashboardComponent}
 ];
 
 @NgModule({

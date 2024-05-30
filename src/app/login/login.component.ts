@@ -21,12 +21,12 @@ export class LoginComponent {
      
       this.auth.getbyuser(loginform.value.username).subscribe((res)=>{
         this.userdata=res
-        console.log(this.userdata)
+        // console.log(this.userdata)
         
         const user = this.userdata.find((u: any) => u.username === loginform.value.username && u.password === loginform.value.password);
         if(user){
           if(user.employeactive){
-            localStorage.setItem('username',user.employeactive)
+            localStorage.setItem('employe',user.employeactive)
             this.r.navigateByUrl('/home')
             this.toas.success("login sucess")
           }
