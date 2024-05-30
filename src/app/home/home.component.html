@@ -48,6 +48,12 @@
         <div class="modal-body">
             <p>resigtertion works!</p>
             <form >
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Id</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="id" [(ngModel)]="id">
+                <div id="emailHelp" class="form-text"></div>
+              </div>
+           
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" [(ngModel)]="username">
@@ -83,7 +89,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" (click)="update(e)" class="btn btn-primary">Updata</button>
+          <button type="button" (click)="update()" class="btn btn-primary">Updata</button>
         </div>
       </div>
     </div>

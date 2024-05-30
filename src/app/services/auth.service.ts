@@ -17,8 +17,8 @@ export class AuthService {
   singinuser(newuser:any){
     return this.http.post(this.apiurl,newuser)
   }
-  updateuser(name:any,newuser:any){
-    return this.http.post(this.apiurl+'/'+name,newuser)
+  updateuser(id:any,newuser:any){
+    return this.http.post(`${this.apiurl}/${id}`,newuser)
   }
   IsLogin(){
     return localStorage.getItem('username')!=null
