@@ -14,7 +14,7 @@ username:any
 password:any
 number:any
 gender:any
-isactive:any
+employeactive:any
 
 
   constructor(private router: Router,public auth:AuthService) { }
@@ -27,5 +27,10 @@ isactive:any
   }
   edit(a:any){
     this.username=a.username
+    this.gender=a.gender
+    this.employeactive=a.employeactive
+  }
+  update(){
+    
   }
 }

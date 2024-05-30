@@ -61,7 +61,7 @@
                 </div>
                 <div class="mb-3">
                     <label  for="exampleCheck1" >select gender</label>
-                    <select class="form-select" aria-label="Default select example"  name="gender" >
+                    <select class="form-select" aria-label="Default select example"  name="gender"  [(ngModel)]="gender" >
                         <option value=undefined>select gender</option>
                         <option value="male">male</option>
                         <option value="female">female</option>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="mb-3">
                     <label  for="exampleCheck2" >select active or diactive</label>
-                    <select class="form-select" aria-label="Default select example"  name="employeactive" [(ngModel)]="gender" >
+                    <select class="form-select" aria-label="Default select example"  name="employeactive"  [(ngModel)]="employeactive">
                         <option value=undefined>select active or diactive</option>
                         <option value="active">active</option>
                         <option value="diactive">diactive</option>
@@ -83,7 +83,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" (click)="update()" class="btn btn-primary">Updata</button>
         </div>
       </div>
     </div>
