@@ -8,7 +8,14 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
   employdata: any;
+username:any
+password:any
+number:any
+gender:any
+isactive:any
+
 
   constructor(private router: Router,public auth:AuthService) { }
 
@@ -17,5 +24,8 @@ export class HomeComponent {
       this.employdata=res
       console.log(res)
     })
+  }
+  edit(a:any){
+    
   }
 }

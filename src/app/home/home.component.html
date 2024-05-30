@@ -31,7 +31,7 @@
         <td>{{a.numbers}}</td>
         <td>{{a.gender}}</td>
         <td>{{a.employeactive}}</td>
-        <td><i type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <td><i type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="edit(a)">
             <i class="bi bi-three-dots-vertical"></i>
         </i></td>
       </tr>
@@ -50,16 +50,13 @@
             <form >
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" >
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" [(ngModel)]="username">
                   <div id="emailHelp" class="form-text"></div>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-                </div>
+             
                 <div class="mb-3">
                     <label  for="exampleCheck1" >number</label>
-                  <input type="number" class="form-control" id="exampleCheck1" name="numbers" >
+                  <input type="number" class="form-control" id="exampleCheck1" name="numbers" [(ngModel)]="number" >
                  
                 </div>
                 <div class="mb-3">
@@ -73,7 +70,7 @@
                 </div>
                 <div class="mb-3">
                     <label  for="exampleCheck2" >select active or diactive</label>
-                    <select class="form-select" aria-label="Default select example"  name="employeactive" >
+                    <select class="form-select" aria-label="Default select example"  name="employeactive" [(ngModel)]="gender" >
                         <option value=undefined>select active or diactive</option>
                         <option value="active">active</option>
                         <option value="diactive">diactive</option>
