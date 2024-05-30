@@ -1,26 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   employdata: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,public auth:AuthService) { }
 
-  ngOnInit(): void {
-    const employ = JSON.parse(localStorage.getItem('username') || '{}');
-    this.employdata = employ;
-    console.log(this.employdata);
-
-    if (employ && employ.employeactive === 'active') {
-      this.router.navigateByUrl('/activedashboard');
-    } else {
-      this.router.navigateByUrl('/diactivedashboard');
-    }
+  ngOnInit(){
+    this.auth.getallusers().subscribe((res)=>{
+      this.employdata=res
+      console.log(res)
+    })
   }
 }
-

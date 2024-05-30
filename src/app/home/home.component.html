@@ -1,2 +1,93 @@
 <p>home works!</p>
-{{employdata}}
+<nav  class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+  
+    
+     
+        <a class="navbar-brand" >
+            <img src="https://media.licdn.com/dms/image/C560BAQFBMpyeAz5dDw/company-logo_200_200/0/1660011165577?e=2147483647&v=beta&t=DMh-0XGMAH8Ex6UCqQ41rUr6xTBa0oqMfDKrY5yU_8Q" alt="" width="100" height="50">
+          </a>
+          <a class="nav-link text-white" routerLink="/activedashboard">Active Employees</a>
+          <a class="nav-link text-white" routerLink="/diactivedboard">Diactive Employee</a>
+          <a  class="nav-link text-white" routerLink="">Log Out</a>
+        </div>
+    
+
+  </nav>
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Employee name</th>
+      <th>Phone number</th>
+      <th>Gender</th>
+      <th>Action</th>
+      <th>updata</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of employdata">
+        
+        <td>{{a.username}}</td>
+        <td>{{a.numbers}}</td>
+        <td>{{a.gender}}</td>
+        <td>{{a.employeactive}}</td>
+        <td><i type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="bi bi-three-dots-vertical"></i>
+        </i></td>
+      </tr>
+     
+    </tbody>
+  </table>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>resigtertion works!</p>
+            <form >
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" >
+                  <div id="emailHelp" class="form-text"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                </div>
+                <div class="mb-3">
+                    <label  for="exampleCheck1" >number</label>
+                  <input type="number" class="form-control" id="exampleCheck1" name="numbers" >
+                 
+                </div>
+                <div class="mb-3">
+                    <label  for="exampleCheck1" >select gender</label>
+                    <select class="form-select" aria-label="Default select example"  name="gender" >
+                        <option value=undefined>select gender</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                        <option value="other">other</option>
+                      </select>
+                </div>
+                <div class="mb-3">
+                    <label  for="exampleCheck2" >select active or diactive</label>
+                    <select class="form-select" aria-label="Default select example"  name="employeactive" >
+                        <option value=undefined>select active or diactive</option>
+                        <option value="active">active</option>
+                        <option value="diactive">diactive</option>
+            
+                      </select>
+                </div>
+               
+              </form>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
