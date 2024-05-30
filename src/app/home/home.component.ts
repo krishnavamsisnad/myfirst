@@ -60,7 +60,9 @@ export class HomeComponent implements OnInit {
       console.error('Error updating user:', error);
     });
   }
-  delet(){
-    this.auth.deletuser()
+  delet(id:any){
+    this.auth.deletuser(id).subscribe((res)=>{
+      this.getall()
+    })
   }
 }
