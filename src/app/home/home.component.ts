@@ -26,6 +26,6 @@ isactive:any
     })
   }
   edit(a:any){
-    
+    this.username=a.username
   }
 }
