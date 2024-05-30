@@ -9,7 +9,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class HomeComponent {
 
-  employdata: any;
+ employdata: any;
 username:any
 password:any
 number:any
@@ -30,7 +30,7 @@ employeactive:any
     this.gender=a.gender
     this.employeactive=a.employeactive
   }
-  update(){
-    
+  update(employdata.id,employdata){
+    this.auth.updateuser(employdata.id,employdata)
   }
 }
