@@ -10,6 +10,7 @@ import { ProductservicesService } from '../productservices.service';
 export class CartComponent {
   product:any
 counter=0
+num=1
 constructor(public router:ActivatedRoute,public pr:ProductservicesService,public rout:Router){}
 
 ngOnInit(){
@@ -24,10 +25,10 @@ next(){
 
 }
 inc(){
-  this.counter
+  this.counter=this.num++
 }
 dec(){
-  this.counter=-1
+  this.counter=this.num--
 }
 
 }
