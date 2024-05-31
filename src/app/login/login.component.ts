@@ -4,6 +4,7 @@ import {  NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import { FirebaseError } from 'firebase/app';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,6 +15,7 @@ export class LoginComponent {
   password:any
   userdata:any
   constructor(public toas:ToastrService,public auth:AuthService,public r:Router){
+
     localStorage.clear()
  
   }
