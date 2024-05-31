@@ -9,7 +9,7 @@ import { ProductservicesService } from '../productservices.service';
 })
 export class CartComponent {
   product:any
-
+counter=0
 constructor(public router:ActivatedRoute,public pr:ProductservicesService,public rout:Router){}
 
 ngOnInit(){
@@ -22,6 +22,12 @@ this.pr.getbyid(id).subscribe((data)=>{
 next(){
   this.rout.navigateByUrl('/buynow')
 
+}
+inc(){
+  this.counter
+}
+dec(){
+  this.counter=-1
 }
 
 }
