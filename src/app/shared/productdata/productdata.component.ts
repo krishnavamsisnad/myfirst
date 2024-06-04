@@ -64,7 +64,7 @@ update(){
   console.log(this.data.id)
   console.log(this.data.title)
 
-  this.api.updateapi(this.data,this.data.id).subscribe((res)=>{
+  this.api.updateapi(this.data.id,this.data).subscribe((res)=>{
 console.log(res)
 
 
