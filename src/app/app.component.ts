@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,9 +24,7 @@ firebaseConfig = {
   measurementId: "G-YVDG1Z6BHQ"
 };
 
-  constructor(){
-    initializeApp(this.firebaseConfig);
-  }
+
 
 
 
