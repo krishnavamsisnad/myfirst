@@ -1,43 +1,64 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+
+interface User {
+  username: string;
+  password: string;
+  role?: string;
+}
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  username = "";
-  password = "";
-  role = "";
-  userdata: any;
-  localdata: any;
+export class HomeComponent implements OnInit {
+  username = '';
+  password = '';
+  role = '';
+  userdata: User[] = [];
+  localdata: User | null = null;
 
-  constructor(public http: HttpClient, public router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
-    const data = JSON.parse(localStorage.getItem('user') || '{}');
-    this.localdata = data;
+    const data = localStorage.getItem('user');
+    if (data) {
+      this.localdata = JSON.parse(data);
+    }
   }
 
   login(user: NgForm) {
-    this.http.get('http://localhost:3000/signin').subscribe((res: any) => {
-      console.log(res);
-      this.userdata = res;
-      const login = this.userdata.find((a: any) => 
-        a.username === user.value.username && a.password === user.value.password
+    if (user.valid) {
+      this.http.get<User[]>('http://localhost:3000/signin').subscribe(
+        (res: User[]) => {
+          this.userdata = res;
+          const login = this.userdata.find(
+            (a: User) => a.username === user.value.username && a.password === user.value.password
+          );
+          if (login) {
+            console.log('Login successful');
+            this.router.navigate(['/dashboard']);
+          } else {
+            console.log('Login failed');
+            // Handle login failure, e.g., show an error message
+            alert('Invalid username or password');
+          }
+        },
+        (error) => {
+          console.error('Error fetching user data:', error);
+          // Handle HTTP request error
+          alert('An error occurred while trying to log in. Please try again later.');
+        }
       );
-      if (login) {
-        console.log('Login successful');
-        // Perform further actions, e.g., navigate to a different route
-        this.router.navigate(['/dashboard']);
-      } else {
-        console.log('Login failed');
-        // Handle login failure, e.g., show an error message
-      }
-    });
+    } else {
+      console.log('Form is invalid');
+      // Handle form validation failure, e.g., show an error message
+      alert('Please fill in all required fields');
+    }
   }
 }
+
 
